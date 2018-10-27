@@ -1,0 +1,204 @@
+[31mF[0m[32m.[0m[31mF[0m[31mF[0m[31mF[0m[31mF[0m[31mF[0m[31mF[0m[31mF[0m[31mF[0m[31mF[0m[31mF[0m[31mF[0m[31mF[0m[31mF[0m[31mF[0m[31mF[0m[31mF[0m[31mF[0m[31mF[0m[31mF[0m[31mF[0m
+
+Failures:
+
+  1) PolyTreeNode#initialize should set an initial value
+     [31mFailure/Error: expect(new_node.value).to eq('new_node')[0m
+     [31mNoMethodError:[0m
+     [31m  undefined method `value' for #<PolyTreeNode:0x00007fba5897faa8 @value="new_node">[0m
+     [36m# ./spec/00_tree_node_spec.rb:13:in `block (3 levels) in <top (required)>'[0m
+
+  2) PolyTreeNode#initialize should set children to an empty array
+     [31mFailure/Error: expect(new_node.children).to eq([])[0m
+     [31mNoMethodError:[0m
+     [31m  undefined method `children' for #<PolyTreeNode:0x00007fba58940f88 @value="new_node">[0m
+     [36m# ./spec/00_tree_node_spec.rb:21:in `block (3 levels) in <top (required)>'[0m
+
+  3) PolyTreeNode#parent= should set a node's parent to the passed node
+     [31mFailure/Error: node2.parent = node1[0m
+     [31mNoMethodError:[0m
+     [31m  undefined method `parent=' for #<PolyTreeNode:0x00007fba5894bbb8 @value="child1">[0m
+     [31m  Did you mean?  parent[0m
+     [36m# ./spec/00_tree_node_spec.rb:27:in `block (3 levels) in <top (required)>'[0m
+
+  4) PolyTreeNode#parent= should add the child node to the passed node's children
+     [31mFailure/Error: node2.parent = node1[0m
+     [31mNoMethodError:[0m
+     [31m  undefined method `parent=' for #<PolyTreeNode:0x00007fba5894add0 @value="child1">[0m
+     [31m  Did you mean?  parent[0m
+     [36m# ./spec/00_tree_node_spec.rb:27:in `block (3 levels) in <top (required)>'[0m
+
+  5) PolyTreeNode#parent= does not add the same node twice
+     [31mFailure/Error: node2.parent = node1[0m
+     [31mNoMethodError:[0m
+     [31m  undefined method `parent=' for #<PolyTreeNode:0x00007fba5894a100 @value="child1">[0m
+     [31m  Did you mean?  parent[0m
+     [36m# ./spec/00_tree_node_spec.rb:27:in `block (3 levels) in <top (required)>'[0m
+
+  6) PolyTreeNode#parent= handles nil without issue
+     [31mFailure/Error: node2.parent = node1[0m
+     [31mNoMethodError:[0m
+     [31m  undefined method `parent=' for #<PolyTreeNode:0x00007fba589493e0 @value="child1">[0m
+     [31m  Did you mean?  parent[0m
+     [36m# ./spec/00_tree_node_spec.rb:27:in `block (3 levels) in <top (required)>'[0m
+
+  7) PolyTreeNode#parent= when reassigning should set the node's parent to the new parent
+     [31mFailure/Error: node2.parent = node1[0m
+     [31mNoMethodError:[0m
+     [31m  undefined method `parent=' for #<PolyTreeNode:0x00007fba5893f8b8 @value="child1">[0m
+     [31m  Did you mean?  parent[0m
+     [36m# ./spec/00_tree_node_spec.rb:27:in `block (3 levels) in <top (required)>'[0m
+
+  8) PolyTreeNode#parent= when reassigning should add the node to the new parent's children
+     [31mFailure/Error: node2.parent = node1[0m
+     [31mNoMethodError:[0m
+     [31m  undefined method `parent=' for #<PolyTreeNode:0x00007fba5893eaf8 @value="child1">[0m
+     [31m  Did you mean?  parent[0m
+     [36m# ./spec/00_tree_node_spec.rb:27:in `block (3 levels) in <top (required)>'[0m
+
+  9) PolyTreeNode#parent= when reassigning should remove the node from its old parent's children
+     [31mFailure/Error: node2.parent = node1[0m
+     [31mNoMethodError:[0m
+     [31m  undefined method `parent=' for #<PolyTreeNode:0x00007fba5893d978 @value="child1">[0m
+     [31m  Did you mean?  parent[0m
+     [36m# ./spec/00_tree_node_spec.rb:27:in `block (3 levels) in <top (required)>'[0m
+
+  10) PolyTreeNode#add_child should pass itself to the child's #parent=
+     [31mFailure/Error: node2.add_child(node3)[0m
+     [31mNoMethodError:[0m
+     [31m  undefined method `add_child' for #<PolyTreeNode:0x00007fba579cfdd8 @value="child1">[0m
+     [36m# ./spec/00_tree_node_spec.rb:70:in `block (3 levels) in <top (required)>'[0m
+
+  11) PolyTreeNode#add_child doesn't add the child twice
+     [31mFailure/Error: node2.add_child(node3)[0m
+     [31mNoMethodError:[0m
+     [31m  undefined method `add_child' for #<PolyTreeNode:0x00007fba5897b610 @value="child1">[0m
+     [36m# ./spec/00_tree_node_spec.rb:74:in `block (3 levels) in <top (required)>'[0m
+
+  12) PolyTreeNode#remove_child should pass nil to the child's #parent=
+     [31mFailure/Error: node3.parent = node2[0m
+     [31mNoMethodError:[0m
+     [31m  undefined method `parent=' for #<PolyTreeNode:0x00007fba58979630 @value="child2">[0m
+     [31m  Did you mean?  parent[0m
+     [36m# ./spec/00_tree_node_spec.rb:81:in `block (3 levels) in <top (required)>'[0m
+
+  13) PolyTreeNode#remove_child should raise an error if node is not a child
+     [31mFailure/Error: node3.parent = node2[0m
+     [31mNoMethodError:[0m
+     [31m  undefined method `parent=' for #<PolyTreeNode:0x00007fba58957940 @value="child2">[0m
+     [31m  Did you mean?  parent[0m
+     [36m# ./spec/00_tree_node_spec.rb:81:in `block (3 levels) in <top (required)>'[0m
+
+  14) Searchable #dfs should take correct path to descendant
+     [31mFailure/Error: child.parent = nodes[parent_index][0m
+     [31mNoMethodError:[0m
+     [31m  undefined method `parent=' for #<PolyTreeNode:0x00007fba58954768 @value="b">[0m
+     [31m  Did you mean?  parent[0m
+     [36m# ./spec/00_tree_node_spec.rb:104:in `block (3 levels) in <top (required)>'[0m
+     [36m# ./spec/00_tree_node_spec.rb:102:in `each'[0m
+     [36m# ./spec/00_tree_node_spec.rb:102:in `each_with_index'[0m
+     [36m# ./spec/00_tree_node_spec.rb:102:in `block (2 levels) in <top (required)>'[0m
+
+  15) Searchable #dfs behaves like search method should return itself if it contains the value
+     [31mFailure/Error: child.parent = nodes[parent_index][0m
+     [31mNoMethodError:[0m
+     [31m  undefined method `parent=' for #<PolyTreeNode:0x00007fba5894f498 @value="b">[0m
+     [31m  Did you mean?  parent[0m
+     [31m[37mShared Example Group: "search method" called from ./spec/00_tree_node_spec.rb:125[0m[0m
+     [36m# ./spec/00_tree_node_spec.rb:104:in `block (3 levels) in <top (required)>'[0m
+     [36m# ./spec/00_tree_node_spec.rb:102:in `each'[0m
+     [36m# ./spec/00_tree_node_spec.rb:102:in `each_with_index'[0m
+     [36m# ./spec/00_tree_node_spec.rb:102:in `block (2 levels) in <top (required)>'[0m
+
+  16) Searchable #dfs behaves like search method should find descendant
+     [31mFailure/Error: child.parent = nodes[parent_index][0m
+     [31mNoMethodError:[0m
+     [31m  undefined method `parent=' for #<PolyTreeNode:0x00007fba5894dd78 @value="b">[0m
+     [31m  Did you mean?  parent[0m
+     [31m[37mShared Example Group: "search method" called from ./spec/00_tree_node_spec.rb:125[0m[0m
+     [36m# ./spec/00_tree_node_spec.rb:104:in `block (3 levels) in <top (required)>'[0m
+     [36m# ./spec/00_tree_node_spec.rb:102:in `each'[0m
+     [36m# ./spec/00_tree_node_spec.rb:102:in `each_with_index'[0m
+     [36m# ./spec/00_tree_node_spec.rb:102:in `block (2 levels) in <top (required)>'[0m
+
+  17) Searchable #dfs behaves like search method should return nil when value is not found
+     [31mFailure/Error: child.parent = nodes[parent_index][0m
+     [31mNoMethodError:[0m
+     [31m  undefined method `parent=' for #<PolyTreeNode:0x00007fba589831f8 @value="b">[0m
+     [31m  Did you mean?  parent[0m
+     [31m[37mShared Example Group: "search method" called from ./spec/00_tree_node_spec.rb:125[0m[0m
+     [36m# ./spec/00_tree_node_spec.rb:104:in `block (3 levels) in <top (required)>'[0m
+     [36m# ./spec/00_tree_node_spec.rb:102:in `each'[0m
+     [36m# ./spec/00_tree_node_spec.rb:102:in `each_with_index'[0m
+     [36m# ./spec/00_tree_node_spec.rb:102:in `block (2 levels) in <top (required)>'[0m
+
+  18) Searchable #bfs should take correct path to descendant
+     [31mFailure/Error: child.parent = nodes[parent_index][0m
+     [31mNoMethodError:[0m
+     [31m  undefined method `parent=' for #<PolyTreeNode:0x00007fba5898ff48 @value="b">[0m
+     [31m  Did you mean?  parent[0m
+     [36m# ./spec/00_tree_node_spec.rb:104:in `block (3 levels) in <top (required)>'[0m
+     [36m# ./spec/00_tree_node_spec.rb:102:in `each'[0m
+     [36m# ./spec/00_tree_node_spec.rb:102:in `each_with_index'[0m
+     [36m# ./spec/00_tree_node_spec.rb:102:in `block (2 levels) in <top (required)>'[0m
+
+  19) Searchable #bfs behaves like search method should return itself if it contains the value
+     [31mFailure/Error: child.parent = nodes[parent_index][0m
+     [31mNoMethodError:[0m
+     [31m  undefined method `parent=' for #<PolyTreeNode:0x00007fba5898e788 @value="b">[0m
+     [31m  Did you mean?  parent[0m
+     [31m[37mShared Example Group: "search method" called from ./spec/00_tree_node_spec.rb:138[0m[0m
+     [36m# ./spec/00_tree_node_spec.rb:104:in `block (3 levels) in <top (required)>'[0m
+     [36m# ./spec/00_tree_node_spec.rb:102:in `each'[0m
+     [36m# ./spec/00_tree_node_spec.rb:102:in `each_with_index'[0m
+     [36m# ./spec/00_tree_node_spec.rb:102:in `block (2 levels) in <top (required)>'[0m
+
+  20) Searchable #bfs behaves like search method should find descendant
+     [31mFailure/Error: child.parent = nodes[parent_index][0m
+     [31mNoMethodError:[0m
+     [31m  undefined method `parent=' for #<PolyTreeNode:0x00007fba5898c708 @value="b">[0m
+     [31m  Did you mean?  parent[0m
+     [31m[37mShared Example Group: "search method" called from ./spec/00_tree_node_spec.rb:138[0m[0m
+     [36m# ./spec/00_tree_node_spec.rb:104:in `block (3 levels) in <top (required)>'[0m
+     [36m# ./spec/00_tree_node_spec.rb:102:in `each'[0m
+     [36m# ./spec/00_tree_node_spec.rb:102:in `each_with_index'[0m
+     [36m# ./spec/00_tree_node_spec.rb:102:in `block (2 levels) in <top (required)>'[0m
+
+  21) Searchable #bfs behaves like search method should return nil when value is not found
+     [31mFailure/Error: child.parent = nodes[parent_index][0m
+     [31mNoMethodError:[0m
+     [31m  undefined method `parent=' for #<PolyTreeNode:0x00007fba58971fe8 @value="b">[0m
+     [31m  Did you mean?  parent[0m
+     [31m[37mShared Example Group: "search method" called from ./spec/00_tree_node_spec.rb:138[0m[0m
+     [36m# ./spec/00_tree_node_spec.rb:104:in `block (3 levels) in <top (required)>'[0m
+     [36m# ./spec/00_tree_node_spec.rb:102:in `each'[0m
+     [36m# ./spec/00_tree_node_spec.rb:102:in `each_with_index'[0m
+     [36m# ./spec/00_tree_node_spec.rb:102:in `block (2 levels) in <top (required)>'[0m
+
+Finished in 0.01631 seconds (files took 0.12087 seconds to load)
+[31m22 examples, 21 failures[0m
+
+Failed examples:
+
+[31mrspec ./spec/00_tree_node_spec.rb:12[0m [36m# PolyTreeNode#initialize should set an initial value[0m
+[31mrspec ./spec/00_tree_node_spec.rb:20[0m [36m# PolyTreeNode#initialize should set children to an empty array[0m
+[31mrspec ./spec/00_tree_node_spec.rb:31[0m [36m# PolyTreeNode#parent= should set a node's parent to the passed node[0m
+[31mrspec ./spec/00_tree_node_spec.rb:36[0m [36m# PolyTreeNode#parent= should add the child node to the passed node's children[0m
+[31mrspec ./spec/00_tree_node_spec.rb:40[0m [36m# PolyTreeNode#parent= does not add the same node twice[0m
+[31mrspec ./spec/00_tree_node_spec.rb:45[0m [36m# PolyTreeNode#parent= handles nil without issue[0m
+[31mrspec ./spec/00_tree_node_spec.rb:53[0m [36m# PolyTreeNode#parent= when reassigning should set the node's parent to the new parent[0m
+[31mrspec ./spec/00_tree_node_spec.rb:57[0m [36m# PolyTreeNode#parent= when reassigning should add the node to the new parent's children[0m
+[31mrspec ./spec/00_tree_node_spec.rb:61[0m [36m# PolyTreeNode#parent= when reassigning should remove the node from its old parent's children[0m
+[31mrspec ./spec/00_tree_node_spec.rb:68[0m [36m# PolyTreeNode#add_child should pass itself to the child's #parent=[0m
+[31mrspec ./spec/00_tree_node_spec.rb:73[0m [36m# PolyTreeNode#add_child doesn't add the child twice[0m
+[31mrspec ./spec/00_tree_node_spec.rb:84[0m [36m# PolyTreeNode#remove_child should pass nil to the child's #parent=[0m
+[31mrspec ./spec/00_tree_node_spec.rb:89[0m [36m# PolyTreeNode#remove_child should raise an error if node is not a child[0m
+[31mrspec ./spec/00_tree_node_spec.rb:127[0m [36m# Searchable #dfs should take correct path to descendant[0m
+[31mrspec ./spec/00_tree_node_spec.rb:110[0m [36m# Searchable #dfs behaves like search method should return itself if it contains the value[0m
+[31mrspec ./spec/00_tree_node_spec.rb:114[0m [36m# Searchable #dfs behaves like search method should find descendant[0m
+[31mrspec ./spec/00_tree_node_spec.rb:118[0m [36m# Searchable #dfs behaves like search method should return nil when value is not found[0m
+[31mrspec ./spec/00_tree_node_spec.rb:140[0m [36m# Searchable #bfs should take correct path to descendant[0m
+[31mrspec ./spec/00_tree_node_spec.rb:110[0m [36m# Searchable #bfs behaves like search method should return itself if it contains the value[0m
+[31mrspec ./spec/00_tree_node_spec.rb:114[0m [36m# Searchable #bfs behaves like search method should find descendant[0m
+[31mrspec ./spec/00_tree_node_spec.rb:118[0m [36m# Searchable #bfs behaves like search method should return nil when value is not found[0m
+
